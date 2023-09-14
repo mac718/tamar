@@ -57,10 +57,10 @@ export default function Home() {
         <section id="banner" className={styles.banner} ref={ref}>
           <div className={styles["banner-text"]}>
             <h1>
-              I'm <span className={styles.last}>Tamar Sabbagh</span>
+              I&apos;m <span className={styles.last}>Tamar Sabbagh</span>
             </h1>
             <h2>
-              I need a new <span className={styles.last}>kidney .</span>
+              I need a new <span className={styles.last}>kidney.</span>
             </h2>
           </div>
           <Image
