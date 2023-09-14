@@ -19,6 +19,10 @@ export default function Home() {
     navRef.current!.querySelectorAll("a").forEach((a) => {
       a.classList.add(`${styles["fade-in"]}`);
     });
+
+    navRef.current!.querySelectorAll("span").forEach((a) => {
+      a.classList.add(`${styles["fade-in"]}`);
+    });
   }, []);
 
   return (
@@ -31,23 +35,25 @@ export default function Home() {
       </Head>
       <nav className={styles.nav} ref={navRef}>
         <div className={styles.top}>
-          <span className={styles["top-icon"]}>
-            <GoMoveToTop />
-          </span>
-          <a href="" className={styles["nav-link"]}>
+          <a href="#top" className={styles["nav-link"]}>
+            <span className={styles["top-icon"]}>
+              <GoMoveToTop />
+            </span>
+          </a>
+          <a href="#top" className={styles["nav-link"]}>
             top
           </a>
         </div>
         <div className={styles.options}>
-          <a href="" className={styles["nav-link"]}>
+          <a href="#about" className={styles["nav-link"]}>
             about
           </a>
-          <a href="" className={styles["nav-link"]}>
+          <a href="#contact" className={styles["nav-link"]}>
             contact
           </a>
         </div>
       </nav>
-      <main className={styles.main}>
+      <main id="top" className={styles.main}>
         <section id="banner" className={styles.banner} ref={ref}>
           <div className={styles["banner-text"]}>
             <h1>
@@ -65,6 +71,18 @@ export default function Home() {
           ></Image>
         </section>
       </main>
+      <section id="about" className={styles.section}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        illum odio aspernatur nisi cum deleniti aliquid, recusandae corrupti
+        officiis tempora eveniet totam fugit consequatur obcaecati. Autem vero
+        officiis similique nulla?
+      </section>
+      <section id="contact" className={styles.section}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        illum odio aspernatur nisi cum deleniti aliquid, recusandae corrupti
+        officiis tempora eveniet totam fugit consequatur obcaecati. Autem vero
+        officiis similique nulla?
+      </section>
     </>
   );
 }

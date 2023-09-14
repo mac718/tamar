@@ -58,20 +58,30 @@
 .nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: fixed;
   height: 50px;
   font-size: 20px;
   width: 100%;
+  background-color: #fdfefe;
+  background-color: #efefef;
+  z-index: 10;
+  padding: 10px;
 }
 
 .nav-link {
   text-decoration: none;
   margin-right: 10px;
   color: #333;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 2px;
-  transition: all 2s ease-in 500ms;
+  transition: opacity 2s ease-in 500ms;
   opacity: 0;
+  z-index: 10;
+}
+
+.nav-link:hover {
+  font-weight: 500;
 }
 
 .options {
@@ -89,6 +99,12 @@
 
 .top-icon {
   margin-right: 5px;
+  transition: all 2s ease-in 500ms;
+  opacity: 0;
+}
+
+.section {
+  height: 1000px;
 }
 
 /* Mobile */
